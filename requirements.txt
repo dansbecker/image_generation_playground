@@ -1,0 +1,6 @@
+openai>=0.26.4
+streamlit
+pillow
+requests
+pandas
+
