@@ -50,9 +50,9 @@ def is_valid_prompt(prompt):
 openai.api_key = os.getenv("OPENAI_CLIENT_SECRET")
 
 prompt1 = st.text_area(default_prompt)
-image_size = st.selectbox("Image size", [256, 512, 1024])
+image_size = st.selectbox("Image size", [512, 1024])
 image_size_reqest = str(image_size) + "x" + str(image_size)
-n_images = st.selectbox("Image size", [1, 2, 3])
+n_images = st.selectbox("Number of images", [1, 2, 3])
 # streamlit multiselect for styles
 if is_valid_prompt(prompt1):
     urls = request_image(prompt1, image_size_reqest, n_images)
